@@ -3,9 +3,7 @@ on:
   push:
     branches: '*'
   pull_request:
-    branches:
-      - main
-      - master
+    branches: '*'
   workflow_dispatch:
 # defaults:
 #   run:
