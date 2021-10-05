@@ -9,10 +9,10 @@ provider "tfe" {}
 
 # terraform cloud
 resource "tfe_workspace" "iac_k8sauto_team" {
-  name              = "iac-k8sauto-team"
-  organization      = "Diehlabs"
-  execution_mode    = "local"
-  tag_names         = ["test", "k8s"]
+  name           = "iac-k8sauto-team"
+  organization   = "Diehlabs"
+  execution_mode = "local"
+  tag_names      = ["test", "k8s"]
 }
 
 # github
