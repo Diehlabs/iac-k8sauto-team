@@ -1,6 +1,6 @@
 provider "github" {
   owner = "Diehlabs"
-  token = var.github_token
+  token = var.GITHUB_TOKEN
 }
 
 provider "tfe" {}
