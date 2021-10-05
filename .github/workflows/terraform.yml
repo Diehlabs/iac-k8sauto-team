@@ -1,9 +1,11 @@
 name: Terraform Configuration Run
-on: 
+on:
   push:
-    branches: '**'
+    branches: 
+      - '*'
   pull_request:
-    branches: '**'
+    branches:
+      - 'main'
   workflow_dispatch:
 
 env:
