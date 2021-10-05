@@ -1,4 +1,4 @@
-variable "GITHUB_TOKEN" {
+variable "github_token" {
   description = "The Github PAT"
   type        = string
   sensitive   = true

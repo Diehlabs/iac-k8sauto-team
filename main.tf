@@ -1,21 +1,16 @@
 provider "github" {
   owner = "Diehlabs"
-  organization = "Diehlabs"
-  token = var.GITHUB_TOKEN
+  #organization = "Diehlabs"
+  token = var.github_token
 }
 
 provider "tfe" {}
 
 
 # terraform cloud
-resource "tfe_organization" "k8sauto" {
-  name  = "k8sAuto"
-  email = "github@diehlabs.com"
-}
-
 resource "tfe_workspace" "iac_k8sauto_team" {
   name              = "iac-k8sauto-team"
-  organization      = tfe_organization.k8sauto.name
+  organization      = "Diehlabs"
   execution_mode    = "local"
   tag_names         = ["test", "k8s"]
 }
@@ -23,7 +18,7 @@ resource "tfe_workspace" "iac_k8sauto_team" {
 # github
 
 resource "github_team" "k8sauto" {
-  name        = tfe_organization.k8sauto.name
+  name        = "k8sAuto"
   description = "Kubernetes Automation"
   privacy     = "closed"
 }

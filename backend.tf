@@ -1,6 +1,7 @@
 terraform {
   backend "remote" {
-    organization = "k8sAuto"
+    organization = "Diehlabs"
+
     workspaces {
       name = "iac-k8sauto-team"
     }
