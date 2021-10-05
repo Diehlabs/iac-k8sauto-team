@@ -1,7 +1,0 @@
-name: Terraform Configuration Run
-on: [push, pull_request]
-jobs:
-  test1:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "Hello, World!"
