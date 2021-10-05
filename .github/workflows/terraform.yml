@@ -1,9 +1,9 @@
 name: Terraform Configuration Run
 on: 
   push:
-    branches: '*'
+    branches: '**'
   pull_request:
-    branches: '*'
+    branches: '**'
   workflow_dispatch:
 # defaults:
 #   run:
