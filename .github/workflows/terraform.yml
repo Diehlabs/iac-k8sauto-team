@@ -1,4 +1,4 @@
-name: Terraform Module Build
+name: Terraform Configuration Run
 on: [push, pull_request]
 # defaults:
 #   run:
