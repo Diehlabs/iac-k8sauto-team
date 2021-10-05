@@ -8,7 +8,7 @@ resource "github_repository" "repos" {
 resource "github_team_repository" "team_repos" {
   for_each   = local.repos.iac
   repository = each.key
-  team_id    = github_repository.repos[each.key].id
+  team_id    = github_team.k8sauto.id #github_repository.repos[each.key].id
   permission = "maintain"
 }
 
