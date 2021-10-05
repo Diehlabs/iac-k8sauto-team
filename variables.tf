@@ -4,9 +4,3 @@ variable "GITHUB_TOKEN" {
   sensitive   = true
   default     = null
 }
-
-variable "tf_version" {
-  description = "Version of Terraform to use"
-  type        = string
-  default     = "1.0.8"
-}

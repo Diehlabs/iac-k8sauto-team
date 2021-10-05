@@ -1,5 +1,6 @@
 provider "github" {
   owner = "Diehlabs"
+  organization = "Diehlabs"
   token = var.GITHUB_TOKEN
 }
 
@@ -17,7 +18,6 @@ resource "tfe_workspace" "iac_k8sauto_team" {
   organization      = tfe_organization.k8sauto.name
   execution_mode    = "local"
   tag_names         = ["test", "k8s"]
-  terraform_version = var.tf_version
 }
 
 # github
