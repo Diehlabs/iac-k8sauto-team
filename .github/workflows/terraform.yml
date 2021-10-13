@@ -11,7 +11,6 @@ on:
 env:
   TF_VERSION: "1.0.8"
   TFE_TOKEN: ${{ secrets.TF_API_TOKEN }} # used by the tfe provider
-  TF_VAR_github_token: ${{ secrets.GH_API_TOKEN }}
 
 jobs:
   terraform_plan:

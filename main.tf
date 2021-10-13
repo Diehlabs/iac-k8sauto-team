@@ -1,11 +1,19 @@
+data "terraform_remote_state" "tfcloud" {
+  backend = "remote"
+  config = {
+    organization = "Diehlabs"
+    workspaces = {
+      name = "tfcloud-mgmt"
+    }
+  }
+}
+
 provider "github" {
   owner = "Diehlabs"
-  #organization = "Diehlabs"
-  token = var.github_token
+  token = data.terraform_remote_state.tfcloud.outputs.github_token
 }
 
 provider "tfe" {}
-
 
 # terraform cloud
 resource "tfe_workspace" "iac_k8sauto_team" {
